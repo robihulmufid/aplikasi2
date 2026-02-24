@@ -1,3 +1,4 @@
+import 'profilpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -116,6 +117,20 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProfilPage()),
+              );
+            },
+            child: const Text('Go to Login'),
+          ),
+        ),
       ),
     );
   }
